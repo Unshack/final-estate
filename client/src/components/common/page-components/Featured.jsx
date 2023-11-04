@@ -4,7 +4,6 @@ import { Navigation } from "swiper/modules";
 import SwiperCore from "swiper";
 import "swiper/css/bundle";
 import ListingItem from "../ListingItem";
-// import ListingItem from "../components/common/ListingItem";
 
 const Featured = () => {
   const [offerListings, setOfferListings] = useState([]);

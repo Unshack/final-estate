@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { BiBed, BiMap, BiMapAlt, BiTab } from "react-icons/bi";
 import CardHoverIcons from "./page-components/CardHoverIcons";
-import CardLabels from "./page-components/CardLabels";
 
 export default function ListingItem({ listing, basis }) {
   return (
@@ -24,47 +23,67 @@ export default function ListingItem({ listing, basis }) {
           <div className='absolute bottom-0 left-0 w-full px-2 py-2 transition-transform bg-gradient-to-t from-black/80 sm:translate-y-10 group-hover:translate-y-0 to-transparent'>
             <div className='text-white flex-align-center gap-x-2'>
               <BiMap />
-              <p>{listing.name}</p>
+              <p>{listing.address}</p>
             </div>
           </div>
         </Link>
       </div>
-      {/* <CardLabels purpose={purpose} distance={distance} /> */}
-      
+      <div className='absolute top-2 left-2 flex-align-center gap-x-2'>
+        <span className='py-[3px] px-3 text-sm rounded-full capitalize text-white bg-primary'>
+          1.2km away
+        </span>
+        <span className='py-[3px] px-3 text-sm rounded-full capitalize text-white bg-secondary'>
+          {listing.type}
+        </span>
+      </div>
 
-      {/* <div className='p-3 flex flex-col gap-2 w-full'>
-            <p className='truncate text-lg font-semibold text-slate-700'>
-              {listing.name}
-            </p>
-            <div className='flex items-center gap-1'>
-              <MdLocationOn className='h-4 w-4 text-green-700' />
-              <p className='text-sm text-gray-600 truncate w-full'>
-                {listing.address}
-              </p>
+      <div className='p-3'>
+        <div className='group-hover:text-primary transition-a'>
+          <h1 className='text-lg font-bold capitalize'>{listing.name}</h1>
+        </div>
+
+        <div className='flex justify-between mt-3'>
+          <div className='flex-align-center gap-x-2'>
+            <div className='icon-box !w-7 !h-7 bg-primary/20 hover:!bg-primary/40 text-primary'>
+              <BiBed />
             </div>
-            <p className='text-sm text-gray-600 line-clamp-2'>
-              {listing.description}
+            <p className='text-sm font-bold'>
+              {" "}
+              {listing.bedrooms > 1
+                ? `${listing.bedrooms} Beds `
+                : `${listing.bedrooms} Bed `}{" "}
             </p>
-            <p className='text-slate-500 mt-2 font-semibold '>
-              $
-              {listing.offer
-                ? listing.discountPrice.toLocaleString("en-US")
-                : listing.regularPrice.toLocaleString("en-US")}
-              {listing.type === "rent" && " / month"}
-            </p>
-            <div className='text-slate-700 flex gap-4'>
-              <div className='font-bold text-xs'>
-                {listing.bedrooms > 1
-                  ? `${listing.bedrooms} beds `
-                  : `${listing.bedrooms} bed `}
-              </div>
-              <div className='font-bold text-xs'>
-                {listing.bathrooms > 1
-                  ? `${listing.bathrooms} baths `
-                  : `${listing.bathrooms} bath `}
-              </div>
+          </div>
+          <div className='flex-align-center gap-x-2'>
+            <div className='icon-box !w-7 !h-7 bg-primary/20 hover:!bg-primary/40 text-primary'>
+              <BiTab />
             </div>
-          </div> */}
+            <p className='text-sm font-bold'>
+              {listing.bathrooms > 1
+                ? `${listing.bathrooms} Baths `
+                : `${listing.bathrooms} Bath `}
+            </p>
+          </div>
+          <div className='flex-align-center gap-x-2'>
+            <div className='icon-box !w-7 !h-7 bg-primary/20 hover:!bg-primary/40 text-primary'>
+              <BiMapAlt />
+            </div>
+            <p className='text-sm font-bold'>3000 sq ft</p>
+          </div>
+        </div>
+        <div className='mt-4 flex-center-between'>
+          <h1 className='text-lg font-semibold text-primary'>
+            $
+            {listing.offer
+              ? listing.discountPrice.toLocaleString("en-US")
+              : listing.regularPrice.toLocaleString("en-US")}
+            {listing.type === "rent" && " / Month"}
+          </h1>
+          <Link to={`/listing/${listing._id}`} className='!opacity-100'>
+            <button className='btn btn-secondary'>details</button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

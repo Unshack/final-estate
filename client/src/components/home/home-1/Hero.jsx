@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { BiPlay } from "react-icons/bi";
 
 const Hero = () => {
   return (
@@ -24,9 +25,14 @@ const Hero = () => {
           </p>
         </div>
         <Link to={"/search"}>
-          <button className='mt-6 btn btn-primary'>get started</button>
+          <div className='mt-6 flex-align-center gap-x-3'>
+            <button className='btn btn-primary'>find property</button>
+            <button className='icon-box !opacity-100 relative before:w-full before:absolute before:h-full before:rounded-full before:bg-[#0176b4] hover:!bg-[#003b5b] before:animate-ping bg-[#035581]'>
+              <BiPlay />
+            </button>
+          </div>
         </Link>
-        <div className='mt-6 text-center flex-align-center gap-x-6'>
+        <div className='mt-8 text-center flex-align-center gap-x-6'>
           <div>
             <h1 className='text-2xl font-bold'>
               12k <span className='text-sm text-primary'>+</span>
