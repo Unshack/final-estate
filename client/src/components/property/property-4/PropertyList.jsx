@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { Navigation } from "swiper/modules";
 import SwiperCore from "swiper";
 import "swiper/css/bundle";
-import ListingItem from "../ListingItem";
+import SingleProductCard from "../../common/page-components/SingleProductCard";
+import { useSelector } from "react-redux";
+import { dataStore } from "../../../redux/user/dataSlice";
 
-const Featured = () => {
+const PropertyList = () => {
   const [offerListings, setOfferListings] = useState([]);
   const [saleListings, setSaleListings] = useState([]);
   const [rentListings, setRentListings] = useState([]);
@@ -45,22 +47,16 @@ const Featured = () => {
   }, []);
 
   return (
-    <div className='pt-10 pb-16'>
+    <div className='pt-10'>
       {offerListings && offerListings.length > 0 && (
-        <div className=''>
-          <div className='text-center'>
-            <h1 className='mx-auto sub-heading'>featured</h1>
-            <h1 className='heading'>explore featured latest properties</h1>
-          </div>
-          <div className='flex flex-wrap gap-4 mt-8'>
-            {offerListings.slice(0, 3).map((listing) => (
-              <ListingItem listing={listing} key={listing._id} />
-            ))}
-          </div>
+        <div className='flex flex-wrap gap-4 mt-8'>
+          {offerListings?.map((listing) => (
+            <SingleProductCard listing={listing} key={listing._id} />
+          ))}
         </div>
       )}
     </div>
   );
 };
 
-export default Featured;
+export default PropertyList;

@@ -15,6 +15,7 @@ import {
   Home,
   Listing,
   Profile,
+  Property,
   Search,
   ServicesTwo,
   SignIn,
@@ -59,6 +60,7 @@ export default function App() {
             <Route path='/search' element={<Search />} />
             <Route path='/services' element={<ServicesTwo />} />
             <Route path='/listing/:listingId' element={<Listing />} />
+            <Route path='/property' element={<Property />} />
             <Route element={<PrivateRoute />}>
               <Route path='/profile' element={<Profile />} />
               <Route path='/create-listing' element={<CreateListing />} />
