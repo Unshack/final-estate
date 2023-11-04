@@ -1,3 +1,5 @@
+import React from "react";
+
 import {
   BiBuildingHouse,
   BiBuildings,
@@ -681,26 +683,26 @@ export const brands = [
   "/images/brands/uber.png",
 ];
 
-export const focus = [
-  {
-    id: 1,
-    name: "Buy a New Home",
-    icon: <BiHomeAlt />,
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod earum commodi provident est ex similique.",
-  },
-  {
-    id: 2,
-    name: "Sell a Home",
-    icon: <BiMoney />,
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod earum commodi provident est ex similique.",
-  },
-  {
-    id: 4,
-    name: "Rent a Home",
-    icon: <BiBuildings />,
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod earum commodi provident est ex similique.",
-  },
-];
+// export const focus = [
+//   {
+//     id: 1,
+//     name: "Buy a New Home",
+//     icon: <BiHomeAlt />,
+//     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod earum commodi provident est ex similique.",
+//   },
+//   {
+//     id: 2,
+//     name: "Sell a Home",
+//     icon: <BiMoney />,
+//     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod earum commodi provident est ex similique.",
+//   },
+//   {
+//     id: 4,
+//     name: "Rent a Home",
+//     icon: <BiBuildings />,
+//     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod earum commodi provident est ex similique.",
+//   },
+// ];
 
 export const categories = [
   {
@@ -801,16 +803,16 @@ export const priceRanges = [
   },
 ];
 
-export const socials = [
-  <FaFacebook />,
-  <FaTwitter />,
-  <FaInstagram />,
-  <FaLinkedin />,
-  <FaBehance />,
-  <FaDribbble />,
-  <FaYoutube />,
-  <FaVimeo />,
-];
+// export const socials = [
+//   <FaFacebook />,
+//   <FaTwitter />,
+//   <FaInstagram />,
+//   <FaLinkedin />,
+//   <FaBehance />,
+//   <FaDribbble />,
+//   <FaYoutube />,
+//   <FaVimeo />,
+// ];
 
 export const ratings = [
   {

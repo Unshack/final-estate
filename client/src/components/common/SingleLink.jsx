@@ -11,16 +11,16 @@ const SingleLink = ({ id, linkText, url, subLinks }) => {
     dispatch(openDropdown({ link: linkText, center }));
   };
   return (
-    <div className="relative">
+    <div className='relative'>
       <NavLink
         to={url}
         end
         key={id}
-        className="relative w-full px-3 py-[0.6rem] lg:px-4 flex-align-center gap-x-1 link"
+        className='relative w-full px-3 py-[0.6rem] lg:px-4 flex-align-center gap-x-1 link'
         onMouseOver={handleDropDown}
       >
         {linkText}
-        {subLinks && <BiChevronDown className="link" />}
+        {subLinks && <BiChevronDown className='link' />}
       </NavLink>
     </div>
   );

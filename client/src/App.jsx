@@ -13,10 +13,19 @@ import Listing from "./pages/Listing";
 import Search from "./pages/Search";
 import { closeDropdown } from "./redux/user/userSlice";
 import Loader from "./components/common/Loader";
+import NewsLetter from "./components/common/NewsLetter";
+import Footer from "./components/common/Footer";
+import BackToTopButton from "./components/common/BackToTopButton";
+import Dropdown from "./components/common/DropDown";
 
 export default function App() {
+  const [showButton, setShowButton] = useState(false);
   const [showLoader, setShowLoader] = useState(false);
   const dispatch = useDispatch();
+
+  window.addEventListener("scroll", () => {
+    window.scrollY > 500 ? setShowButton(true) : setShowButton(false);
+  });
 
   const handleCloseDropdown = (e) => {
     dispatch(closeDropdown());
@@ -28,9 +37,11 @@ export default function App() {
 
   return (
     <div>
-      {showLoader && <Loader />}
       <BrowserRouter>
+        {showLoader && <Loader />}
         <Navbar />
+        <Dropdown />
+
         <div
           className='min-h-screen pb-40'
           onClick={handleCloseDropdown}
@@ -52,6 +63,13 @@ export default function App() {
             </Route>
           </Routes>
         </div>
+        <div className='px-[2%] md:px-[6%] bg-card-dark border border-card-dark'>
+          <NewsLetter />
+          <div className='mt-20'>
+            <Footer />
+          </div>
+        </div>
+        <BackToTopButton showButton={showButton} />
       </BrowserRouter>
     </div>
   );
