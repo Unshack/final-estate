@@ -34,10 +34,6 @@ export default {
       },
     },
   },
-  // plugins: [
-  //   require("@tailwindcss/line-clamp"),
-  //   // ...
-  // ],
   plugins: [
     require("@tailwindcss/line-clamp"),
     plugin(function ({ addUtilities }) {
