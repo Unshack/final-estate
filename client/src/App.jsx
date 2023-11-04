@@ -11,6 +11,7 @@ import BackToTopButton from "./components/common/BackToTopButton";
 import Dropdown from "./components/common/DropDown";
 import {
   About,
+  Blog,
   CreateListing,
   Home,
   Listing,
@@ -61,6 +62,7 @@ export default function App() {
             <Route path='/services' element={<ServicesTwo />} />
             <Route path='/listing/:listingId' element={<Listing />} />
             <Route path='/property' element={<Property />} />
+            <Route path='/blog' element={<Blog />} />
             <Route element={<PrivateRoute />}>
               <Route path='/profile' element={<Profile />} />
               <Route path='/create-listing' element={<CreateListing />} />

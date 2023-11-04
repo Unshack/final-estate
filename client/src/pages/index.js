@@ -9,3 +9,4 @@ export { default as SignUp } from "./SignUp";
 export { default as UpdateListing } from "./UpdateListing";
 export { default as ServicesTwo } from "./ServicesTwo";
 export { default as Property } from "./Property";
+export { default as Blog } from "./Blog";

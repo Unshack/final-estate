@@ -10,3 +10,4 @@ export { default as Feeds } from "./Feeds";
 export { default as WhatWeDo } from "./WhatWeDo";
 export { default as Categories } from "./Categories";
 export { default as Pagination } from "./Pagination";
+export { default as BlogPostsList } from "./BlogPostsList";
