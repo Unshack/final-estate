@@ -10,3 +10,4 @@ export { default as UpdateListing } from "./UpdateListing";
 export { default as ServicesTwo } from "./ServicesTwo";
 export { default as Property } from "./Property";
 export { default as Blog } from "./Blog";
+export { default as Contact } from "./Contact";

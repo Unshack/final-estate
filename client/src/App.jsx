@@ -12,6 +12,7 @@ import Dropdown from "./components/common/DropDown";
 import {
   About,
   Blog,
+  Contact,
   CreateListing,
   Home,
   Listing,
@@ -63,6 +64,7 @@ export default function App() {
             <Route path='/listing/:listingId' element={<Listing />} />
             <Route path='/property' element={<Property />} />
             <Route path='/blog' element={<Blog />} />
+          <Route path='/contact' element={<Contact />} />
             <Route element={<PrivateRoute />}>
               <Route path='/profile' element={<Profile />} />
               <Route path='/create-listing' element={<CreateListing />} />
