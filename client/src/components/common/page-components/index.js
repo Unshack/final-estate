@@ -4,3 +4,7 @@ export { default as Projects } from "./Projects";
 export { default as Testimonial } from "./Testimonial";
 export { default as Brands } from "./Brands";
 export { default as Featured } from "./Featured";
+export { default as AboutUs } from "./AboutUs";
+export { default as Team } from "./Team";
+export { default as Feeds } from "./Feeds";
+export { default as WhatWeDo } from "./WhatWeDo";

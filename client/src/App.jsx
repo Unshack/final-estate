@@ -1,22 +1,25 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import SignIn from "./pages/SignIn";
-import SignUp from "./pages/SignUp";
-import Profile from "./pages/Profile";
 import Navbar from "./components/common/Navbar";
 import PrivateRoute from "./components/common/PrivateRoute";
-import CreateListing from "./pages/CreateListing";
-import UpdateListing from "./pages/UpdateListing";
-import Listing from "./pages/Listing";
-import Search from "./pages/Search";
 import { closeDropdown } from "./redux/user/userSlice";
 import Loader from "./components/common/Loader";
 import NewsLetter from "./components/common/NewsLetter";
 import Footer from "./components/common/Footer";
 import BackToTopButton from "./components/common/BackToTopButton";
 import Dropdown from "./components/common/DropDown";
+import {
+  About,
+  CreateListing,
+  Home,
+  Listing,
+  Profile,
+  Search,
+  SignIn,
+  SignUp,
+  UpdateListing,
+} from "./pages";
 
 export default function App() {
   const [showButton, setShowButton] = useState(false);
@@ -49,6 +52,7 @@ export default function App() {
         >
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/about-us' element={<About />} />
             <Route path='/sign-in' element={<SignIn />} />
             <Route path='/sign-up' element={<SignUp />} />
             <Route path='/search' element={<Search />} />
