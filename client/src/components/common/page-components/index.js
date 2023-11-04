@@ -8,3 +8,4 @@ export { default as AboutUs } from "./AboutUs";
 export { default as Team } from "./Team";
 export { default as Feeds } from "./Feeds";
 export { default as WhatWeDo } from "./WhatWeDo";
+export { default as Categories } from "./Categories";
