@@ -43,39 +43,67 @@ export default function SignIn() {
     }
   };
   return (
-    <div className='p-3 pt-16 max-w-lg mx-auto'>
-      <h1 className='text-3xl text-center font-semibold my-7'>Sign In</h1>
-      <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
-        <input
-          type='email'
-          placeholder='email'
-          className='border p-3 rounded-lg'
-          id='email'
-          onChange={handleChange}
-        />
-        <input
-          type='password'
-          placeholder='password'
-          className='border p-3 rounded-lg'
-          id='password'
-          onChange={handleChange}
-        />
-
-        <button
-          disabled={loading}
-          className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'
-        >
-          {loading ? "Loading..." : "Sign In"}
-        </button>
-        <OAuth />
-      </form>
-      <div className='flex gap-2 mt-5'>
-        <p>Dont have an account?</p>
-        <Link to={"/sign-up"}>
-          <span className='text-blue-700'>Sign up</span>
-        </Link>
+    <div className='min-h-screen flex-center-center pt-20'>
+      <div className='max-w-[450px] w-[95%] mx-auto'>
+        <h1 className='login-heading'>let&apos;s get started</h1>
+        <div className='mt-3'>
+          Don&apos;t have an account?
+          <Link to={"/sign-up"}>
+            <span className='text-[#6978ef] hover:underline !opacity-100'>
+              {" "}
+              Sign up
+            </span>
+          </Link>
+        </div>
+        <div>
+          <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
+            <OAuth />
+            <p className='divider text-center'>Or</p>
+            <div className='mt-4 bg-white border rounded-lg p-4 dark:bg-card-dark dark:border-dark'>
+              <label htmlFor='email' className='text-muted'>
+                Email
+              </label>
+              <div className='my-3'>
+                <input
+                  type='email'
+                  placeholder='email'
+                  className='px-4 py-2 w-full rounded-md outline-none bg-transparent border dark:border-dark'
+                  id='email'
+                  onChange={handleChange}
+                />
+              </div>
+              <label htmlFor='email' className='text-muted'>
+                Password
+              </label>
+              <div className='mt-2'>
+                <input
+                  type='password'
+                  placeholder='password'
+                  className='px-4 py-2 w-full rounded-md outline-none bg-transparent border dark:border-dark'
+                  id='password'
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+            <div className='flex-center-between'>
+              <div className='input-check'>
+                <input type='checkbox' id='remember' />
+                <label htmlFor='remember'>Remember me</label>
+              </div>
+              <Link className='text-[#6978ef] hover:underline'>
+                Forgot your password?
+              </Link>
+            </div>
+            <button
+              disabled={loading}
+              className='mt-3 btn2 btn-primary w-full disabled:opacity-80 capitalize'
+            >
+              {loading ? "Loading..." : "Sign In"}
+            </button>
+          </form>
+        </div>
+        {error && <p className='text-red-500 mt-5'>{error}</p>}
       </div>
-      {error && <p className='text-red-500 mt-5'>{error}</p>}
     </div>
   );
 }

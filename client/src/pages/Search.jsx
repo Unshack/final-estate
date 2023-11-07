@@ -145,7 +145,7 @@ export default function Search() {
             onChange={handleChange}
             defaultValue={"created_at_desc"}
             id='sort_order'
-            className='w-full px-3 py-2 bg-white border outline-none dark:border-dark dark:bg-main-dark md:hidden'
+            className='w-full px-3 py-2 bg-white border outline-none dark:border-dark dark:bg-main-dark'
           >
             <option value='regularPrice_desc'>Price high to low</option>
             <option value='regularPrice_asc'>Price low to hight</option>
@@ -163,7 +163,7 @@ export default function Search() {
           {
             <>
               <div className='lg:hidden'>
-                <button className='-ml-2 icon-box relative before:w-full before:absolute before:h-full before:rounded-full before:bg-[#0176b4] hover:!bg-[#003b5b] before:animate-ping bg-[#035581]'>
+                <button className='-ml-2 icon-box relative before:w-full before:absolute before:h-full before:rounded-full before:bg-secondary hover:!bg-[#003b5b] before:animate-ping bg-secondary'>
                   <BiSearch className='text-white' />
                 </button>
               </div>
@@ -212,7 +212,6 @@ export default function Search() {
                 <div className='icon-box md:hidden'>{/* <FiDelete /> */}</div>
                 <p className='uppercase'>Filters</p>
               </div>
-              {/* <AdvancedSearch /> */}
               <div className='p-3 border dark:border-dark'>
                 <h1 className='font-semibold'>Advanced Search</h1>
                 <div className='mt-3'>

@@ -54,6 +54,10 @@ footer a:hover {
   @apply text-3xl font-bold capitalize text-secondary dark:text-slate-300;
 }
 
+.login-heading {
+  @apply font-bold text-2xl capitalize;
+}
+
 .sub-heading {
   @apply text-primary text-sm uppercase w-fit bg-primary/20 px-3 py-[3px] rounded-full mb-3 max-w-[200px];
 }
@@ -71,7 +75,11 @@ footer a:hover {
 }
 
 .btn {
-  @apply px-4 py-[0.35rem] rounded-lg transition-a sm:cursor-pointer !uppercase flex-shrink-0;
+  @apply px-5 py-[0.35rem] rounded-lg transition-a sm:cursor-pointer !uppercase flex-shrink-0;
+}
+
+.btn2 {
+  @apply px-4 py-[0.35rem] rounded-lg transition-a sm:cursor-pointer capitalize flex-shrink-0;
 }
 
 .btn-primary {
@@ -261,4 +269,10 @@ a.active {
 
 .isOpen {
   @apply max-h-screen p-4;
+}
+
+/* Login & Sign-up heading didvider */
+.divider {
+  @apply relative before:absolute before:w-[45%] before:h-[2px] before:top-1/2 before:bg-slate-300 before:left-0  dark:before:bg-dark;
+  @apply relative after:absolute after:w-[45%] after:h-[2px] after:top-1/2 after:bg-gray-300 after:right-0 dark:after:bg-dark;
 }
