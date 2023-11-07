@@ -3,6 +3,7 @@ import PropertyList from "../components/property/property-4/PropertyList";
 import { property } from "../data/dummyData";
 
 const Property = () => {
+
   return (
     <div className='pt-16 px-[3%] md:px-[6%]'>
       <PropertyList basis='basis-[25rem]' />

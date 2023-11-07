@@ -4,7 +4,7 @@ import { BiPlay } from "react-icons/bi";
 const Hero = () => {
   return (
     <div
-      className='relative z-0 flex-wrap min-h-screen gap-2 md:-mt-10 flex-center-center'
+      className='relative z-0 flex-wrap min-h-screen gap-2 md:-mt-10 flex-center-center '
       style={{
         background: "url('/images/hero-bg-pattern.png')",
         backgroundRepeat: "no-repeat",
@@ -27,8 +27,8 @@ const Hero = () => {
         <Link to={"/search"}>
           <div className='mt-6 flex-align-center gap-x-3'>
             <button className='btn btn-primary'>find property</button>
-            <button className='icon-box !opacity-100 relative before:w-full before:absolute before:h-full before:rounded-full before:bg-[#0176b4] hover:!bg-[#003b5b] before:animate-ping bg-[#035581]'>
-              <BiPlay />
+            <button className='icon-box relative before:w-full before:absolute before:h-full before:rounded-full before:bg-[#0176b4] hover:!bg-[#003b5b] before:animate-ping bg-[#035581]'>
+              <BiPlay className="text-white" />
             </button>
           </div>
         </Link>

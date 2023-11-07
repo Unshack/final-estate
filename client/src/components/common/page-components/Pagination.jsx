@@ -1,5 +1,4 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-// /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useEffect, useState } from "react";
 import { FiChevronsLeft, FiChevronsRight } from "react-icons/fi";
 import ReactPaginate from "react-paginate";
@@ -25,20 +24,20 @@ const Pagination = ({ itemsPerPage, pageData }) => {
 
   return (
     <ReactPaginate
-      breakLabel="..."
+      breakLabel='...'
       nextLabel={<FiChevronsRight />}
       onPageChange={handlePageClick}
       pageRangeDisplayed={2}
       pageCount={pageCount}
       previousLabel={<FiChevronsLeft />}
       renderOnZeroPageCount={null}
-      containerClassName="wb-pagination"
-      pageClassName="pagination-item"
-      pageLinkClassName="pagination-link"
-      activeClassName="pagination-link-active"
-      previousLinkClassName="prev"
-      nextLinkClassName="next"
-      disabledClassName="disabled"
+      containerClassName='wb-pagination'
+      pageClassName='pagination-item'
+      pageLinkClassName='pagination-link'
+      activeClassName='pagination-link-active'
+      previousLinkClassName='prev'
+      nextLinkClassName='next'
+      disabledClassName='disabled'
     />
   );
 };

@@ -121,7 +121,7 @@ const Footer = () => {
       </footer>
       <div className="py-2 mt-3 text-center border-t text-muted border-dark">
         <p>
-          Created By <span className="text-primary">Wabweni Brian</span> | All
+          Created By <span className="text-primary">MarkoDev</span> | All
           Rights Reserved
         </p>
       </div>
