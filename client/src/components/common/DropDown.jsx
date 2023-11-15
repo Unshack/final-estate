@@ -30,7 +30,7 @@ const Dropdown = () => {
                 key={id}
                 end
                 to={url}
-                className="p-2 space-x-3 rounded-lg flex-align-center sm:cursor-pointer hover:bg-slate-100 dark:hover:bg-hover-color-dark before:!hidden"
+                className='p-2 space-x-3 rounded-lg flex-align-center sm:cursor-pointer hover:bg-slate-100 dark:hover:bg-hover-color-dark before:!hidden'
               >
                 {linkText}
               </NavLink>
