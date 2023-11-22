@@ -11,14 +11,23 @@ import BackToTopButton from "./components/common/BackToTopButton";
 import Dropdown from "./components/common/DropDown";
 import {
   About,
+  AboutTwo,
   Blog,
+  BlogFour,
+  BlogThree,
+  BlogTwo,
   Contact,
   CreateListing,
   Home,
+  HomeThree,
+  HomeTwo,
   Listing,
   Profile,
   Property,
+  PropertySix,
+  PropertyThree,
   Search,
+  Services,
   ServicesTwo,
   SignIn,
   SignUp,
@@ -56,15 +65,24 @@ export default function App() {
         >
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/home-2' element={<HomeTwo />} />
+            <Route path='/home-3' element={<HomeThree />} />
             <Route path='/about-us' element={<About />} />
+            <Route path='/about-2' element={<AboutTwo />} />
             <Route path='/sign-in' element={<SignIn />} />
             <Route path='/sign-up' element={<SignUp />} />
             <Route path='/search' element={<Search />} />
+            <Route path='/services-2' element={<Services />} />
             <Route path='/services' element={<ServicesTwo />} />
             <Route path='/listing/:listingId' element={<Listing />} />
             <Route path='/property' element={<Property />} />
+            <Route path='/property-3' element={<PropertyThree />} />
+            <Route path='/property-6' element={<PropertySix />} />
             <Route path='/blog' element={<Blog />} />
-          <Route path='/contact' element={<Contact />} />
+            <Route path='/blog-2' element={<BlogTwo />} />
+            <Route path='/blog-3' element={<BlogThree />} />
+            <Route path='/blog-4' element={<BlogFour />} />
+            <Route path='/contact' element={<Contact />} />
             <Route element={<PrivateRoute />}>
               <Route path='/profile' element={<Profile />} />
               <Route path='/create-listing' element={<CreateListing />} />

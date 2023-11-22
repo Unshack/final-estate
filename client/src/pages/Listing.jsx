@@ -9,7 +9,6 @@ import {
   FaBath,
   FaBed,
   FaChair,
-  FaMapMarkedAlt,
   FaMapMarkerAlt,
   FaParking,
   FaShare,
@@ -52,17 +51,17 @@ export default function Listing() {
 
   return (
     <main>
-      {loading && <p className='text-center my-7 text-2xl'>Loading...</p>}
+      {loading && <p className='text-center my-7 text-2xl pt-16'>Loading...</p>}
       {error && (
-        <p className='text-center my-7 text-2xl'>Something went wrong!</p>
+        <p className='text-center my-7 text-2xl pt-16'>Something went wrong!</p>
       )}
       {listing && !loading && !error && (
-        <div>
+        <div className="pt-[45px]">
           <Swiper navigation>
             {listing.imageUrls.map((url) => (
               <SwiperSlide key={url}>
                 <div
-                  className='h-[550px]'
+                  className='h-[550px] pt-16'
                   style={{
                     background: `url(${url}) center no-repeat`,
                     backgroundSize: "cover",

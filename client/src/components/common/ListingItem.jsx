@@ -20,7 +20,7 @@ export default function ListingItem({ listing, basis }) {
             className='w-full  h-fit md:h-[250px] object-cover group-hover:scale-125 transition-a'
           />
           <CardHoverIcons />
-          <div className='absolute bottom-0 left-0 w-full px-2 py-2 transition-transform bg-gradient-to-t from-black/80 sm:translate-y-10 group-hover:translate-y-0 to-transparent'>
+          <div className='absolute -bottom-5 left-0 w-full px-2 py-2 transition-transform bg-gradient-to-t from-black/80 sm:translate-y-10 group-hover:-translate-y-5 to-transparent'>
             <div className='text-white flex-align-center gap-x-2'>
               <BiMap />
               <p>{listing.address}</p>

@@ -6,17 +6,17 @@ export const navLinks = [
     subLinks: [
       {
         id: 1,
-        linkText: 'Home 1',
+        linkText: 'Find Your Property',
         url: '/',
       },
       {
         id: 2,
-        linkText: 'Home 2',
+        linkText: 'Your Dream Home',
         url: '/home-2',
       },
       {
         id: 3,
-        linkText: 'Home 3',
+        linkText: 'Home Environment',
         url: '/home-3',
       },
     ],
@@ -28,12 +28,12 @@ export const navLinks = [
     subLinks: [
       {
         id: 1,
-        linkText: 'About 1',
+        linkText: 'About Home Decoration',
         url: '/about-us',
       },
       {
         id: 2,
-        linkText: 'About 2',
+        linkText: 'Quality Renovations',
         url: '/about-2',
       },
     ],
@@ -45,12 +45,12 @@ export const navLinks = [
     subLinks: [
       {
         id: 1,
-        linkText: 'Services 1',
+        linkText: 'Making Ideas Into Reality',
         url: '/services',
       },
       {
         id: 2,
-        linkText: 'Services 2',
+        linkText: 'Services Specialists Provided',
         url: '/services-2',
       },
     ],
@@ -66,28 +66,13 @@ export const navLinks = [
         url: '/property',
       },
       {
-        id: 2,
-        linkText: 'Property 2',
-        url: '/property-2',
-      },
-      {
         id: 3,
-        linkText: 'Property 3',
+        linkText: 'Property 2',
         url: '/property-3',
       },
       {
-        id: 4,
-        linkText: 'Property 4',
-        url: '/property-4',
-      },
-      {
-        id: 5,
-        linkText: 'Property 5',
-        url: '/property-5',
-      },
-      {
         id: 6,
-        linkText: 'Property 6',
+        linkText: 'Property 3',
         url: '/property-6',
       },
     ],
@@ -99,22 +84,22 @@ export const navLinks = [
     subLinks: [
       {
         id: 1,
-        linkText: 'Blog 1',
+        linkText: 'Blog of January',
         url: '/blog',
       },
       {
         id: 2,
-        linkText: 'Blog 2',
+        linkText: 'Blog of April',
         url: '/blog-2',
       },
       {
         id: 3,
-        linkText: 'Blog 3',
+        linkText: 'Blog of June',
         url: '/blog-3',
       },
       {
         id: 4,
-        linkText: 'Blog 4',
+        linkText: 'Blog of October',
         url: '/blog-4',
       },
     ],

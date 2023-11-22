@@ -26,7 +26,7 @@ const Hero = () => {
         </div>
         <Link to={"/search"}>
           <div className='mt-6 flex-align-center gap-x-3'>
-            <button className='btn btn-primary'>find property</button>
+            <button className='btn btn-primary'>get started</button>
             <button className='icon-box relative before:w-full before:absolute before:h-full before:rounded-full before:bg-[#0176b4] hover:!bg-[#003b5b] before:animate-ping bg-[#035581]'>
               <BiPlay className="text-white" />
             </button>
